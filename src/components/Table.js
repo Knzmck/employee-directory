@@ -3,19 +3,21 @@ import "../App.css"
 
 const Table = () => {
   return (
-    <div className="table">
-      <table>
+    <div>
+      <table className="table table-striped table-hover table-condensed">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>First</th>
-            <th>Last</th>
-            <th>Email</th>
+            <th scope="col">Image</th>
+            <th scope="col">ID</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>1</th>
+            <td>IMAGE</td>
+            <td>1</td>
             <td>Mackenzie</td>
             <td>Schutz</td>
             <td>email@email.com</td>

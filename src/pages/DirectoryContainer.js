@@ -19,7 +19,7 @@ class DirectoryContainer extends Component {
                 this.setState({ result: res.data.results })
             })
     }
-    // API GET USERS 
+
     //   state = {
     //     currentPage: "Home"
     //   };

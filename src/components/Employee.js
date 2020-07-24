@@ -4,14 +4,16 @@ import EmployeeContext from "../utils/EmployeeContext"
 
 // Create a map of all employees
 const Employee = () => {
-    // const { employee } = useContext(EmployeeContext);
+    const { employee } = useContext(EmployeeContext);
     return (
         <tr>
-            <td>IMAGE</td>
+            <td> <img className="card-img" src={employee.image} alt="employee image" />
+                {!employee.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />} </td>
             <td> </td>
-            <td>FIRST NAME</td>
-            <td>LAST NAME</td>
-            <td>email@email.com</td>
+            <td>{employee.first}</td>
+            <td>{employee.last}</td>
+            <td>{employee.email}</td>
+            <td>{employee.phone}</td>
         </tr>
     );
 }

@@ -7,7 +7,7 @@ export default {
                 .get("https://randomuser.me/api/?results=200&nat=us")
                 .then(res => {
                     const employees = res.data.results;
-                    // console.log(res.data.results)
+                    console.log(res.data.results)
                     const results = employees.map(employee => {
                         return {
                             first: employee.name.first,

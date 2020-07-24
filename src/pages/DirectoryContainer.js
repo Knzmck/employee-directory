@@ -3,6 +3,7 @@ import Table from "../components/Table";
 import Wrapper from "../components/Wrapper";
 import Navbar from "../components/Navbar";
 import API from "../utils/API";
+import "../App.css"
 
 class DirectoryContainer extends Component {
     state = {
@@ -19,33 +20,24 @@ class DirectoryContainer extends Component {
                 this.setState({ result: res.data.results })
             })
     }
-
-    //   state = {
-    //     currentPage: "Home"
-    //   };
-
-    //   handlePageChange = page => {
-    //     this.setState({ currentPage: page });
-    //   };
-
-    //   renderPage = () => {
-    //     if (this.state.currentPage === "Home") {
-    //       return <Home />;
-    //     } else if (this.state.currentPage === "About") {
-    //       return <About />;
-    //     } else if (this.state.currentPage === "Blog") {
-    //       return <Blog />;
-    //     } else {
-    //       return <Contact />;
-    //     }
-    //   };
-
     render() {
         return (
             <main >
                 <Wrapper>
                     <Navbar />
-                    <Table />
+
+                    <table className="table table-striped table-hover table-condensed">
+                        <Table />
+                        <tbody>
+                            <tr>
+                                <td>IMAGE</td>
+                                <td>1</td>
+                                <td>Mackenzie</td>
+                                <td>Schutz</td>
+                                <td>email@email.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </Wrapper>
             </main>
         );

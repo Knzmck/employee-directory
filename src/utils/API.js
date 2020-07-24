@@ -6,14 +6,15 @@ export default {
             axios
                 .get("https://randomuser.me/api/?results=200&nat=us")
                 .then(res => {
-                    const employees = res.data;
+                    const employees = res.data.results;
+                    // console.log(res.data.results)
                     const results = employees.map(employee => {
                         return {
                             first: employee.name.first,
-                            last: employee.name.last,
-                            image: employee.picture,
-                            email: employee.email,
-                            phone: employee.phone
+                            last: employee.name.last
+                            // image: employee.picture,
+                            // email: employee.email,
+                            // phone: employee.phone
                         }
                     })
                     resolve(results)

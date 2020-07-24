@@ -21,6 +21,7 @@ function DirectoryContainer() {
             .then(employees => {
                 setEmployees(employees);
                 setEmployee(employees[0]);
+                console.log(employees[0]);
             })
             .catch(err => console.log(err))
     };

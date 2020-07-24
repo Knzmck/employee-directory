@@ -11,10 +11,10 @@ export default {
                     const results = employees.map(employee => {
                         return {
                             first: employee.name.first,
-                            last: employee.name.last
-                            // image: employee.picture,
-                            // email: employee.email,
-                            // phone: employee.phone
+                            last: employee.name.last,
+                            image: employee.picture,
+                            email: employee.email,
+                            phone: employee.phone
                         }
                     })
                     resolve(results)

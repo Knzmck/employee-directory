@@ -6,6 +6,7 @@ const EmployeeContext = React.createContext({
     image: "",
     email: "",
     phone: "",
+    ID: "",
     handleBtnClick: () => {}
 })
 

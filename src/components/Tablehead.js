@@ -1,10 +1,8 @@
 import React from 'react';
 import "../App.css";
-import Employee from './Employee.js'
 
-const Table = (props) => {
+const Tablehead = (props) => {
     return (
-      <table className="table table-striped table-hover table-condensed">
         <thead>
           <tr>
             <th scope="col">Image</th>
@@ -15,10 +13,6 @@ const Table = (props) => {
             <th scope="col">Phone</th>
           </tr>
         </thead>
-        <tbody>
-        <Employee />
-        </tbody>
-      </table>
     );
   }
-export default Table;
+export default Tablehead;

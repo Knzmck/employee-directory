@@ -1,4 +1,5 @@
 import axios from "axios";
+import uuid from 'react-uuid'
 
 export default {
     getEmployees: function () {
@@ -14,7 +15,8 @@ export default {
                             last: employee.name.last,
                             image: employee.picture,
                             email: employee.email,
-                            phone: employee.phone
+                            phone: employee.phone,
+                            ID: uuid()
                         }
                     })
                     resolve(results)

@@ -1,38 +1,48 @@
 import React, { useState, useEffect } from "react";
-import Table from "../components/Table";
 import Wrapper from "../components/Wrapper";
 import Navbar from "../components/Navbar";
 import API from "../utils/API";
 import EmployeeContext from "../utils/EmployeeContext";
 import "../App.css";
+import Employee from '../components/Employee'
+import Tablehead from "../components/Tablehead";
 
 function DirectoryContainer() {
     const [employees, setEmployees] = useState([]);
     const [employee, setEmployee] = useState({});
-    // const [employeeIndex, setEmployeeIndex] = useState(0);
+    // const [employeeIndex, setEmployeeIndex] = [];
 
-    // When the component mounts, a call will be made to get random users.
-    useEffect(() => {
-        loadEmployees();
-    }, []);
 
     const loadEmployees = () => {
         API.getEmployees()
             .then(employees => {
                 setEmployees(employees);
                 setEmployee(employees[0]);
-                console.log(employees[0]);
+                console.log(employees);
             })
             .catch(err => console.log(err))
     };
 
+
+    // When the component mounts, a call will be made to get random users.
+    useEffect(() => {
+        loadEmployees();
+    }, []);
+
     return (
-        <EmployeeContext.Provider value={{ employee, employees }}>
-            <Wrapper>
-                <Navbar />
-                <Table />
-            </Wrapper>
-        </EmployeeContext.Provider>
+
+        <Wrapper>
+            <Navbar />
+            <table className="table table-striped table-hover table-condensed">
+                <Tablehead />
+                <tbody>
+                    <EmployeeContext.Provider value={{ employee, employees }}>
+                        {employees.map(employee => <Employee employee = {employee} />)}
+                    </EmployeeContext.Provider>
+                </tbody>
+            </table>
+        </Wrapper>
+
     )
 }
 

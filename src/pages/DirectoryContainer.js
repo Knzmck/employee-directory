@@ -1,34 +1,37 @@
-import React, { Component, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Table from "../components/Table";
 import Wrapper from "../components/Wrapper";
 import Navbar from "../components/Navbar";
 import API from "../utils/API";
 import EmployeeContext from "../utils/EmployeeContext";
-import "../App.css"
+import "../App.css";
 
 function DirectoryContainer() {
-    const [users, setUsers] = useState([]);
-    const [user, setUser] = useState({});
-    const [userIndex, setUserIndex] = useState(0);
+    const [employees, setEmployees] = useState([]);
+    const [employee, setEmployee] = useState({});
+    // const [employeeIndex, setEmployeeIndex] = useState(0);
 
+    // When the component mounts, a call will be made to get random users.
     useEffect(() => {
-        
-    })
+        loadEmployees();
+    }, []);
 
-    loadEmployees = () => {
-        API.getUsers()
-            .then(res => {
-                this.setState({ result: res.data.results });
-                console.log(res.data.results)
+    const loadEmployees = () => {
+        API.getEmployees()
+            .then(employees => {
+                setEmployees(employees);
+                setEmployee(employees[0]);
             })
-    }
+            .catch(err => console.log(err))
+    };
+
     return (
-        <main >
+        <EmployeeContext.Provider value={{ employee, employees }}>
             <Wrapper>
                 <Navbar />
-                <Table data={this.state.results} />
+                <Table />
             </Wrapper>
-        </main>
+        </EmployeeContext.Provider>
     )
 }
 

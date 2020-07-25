@@ -1,53 +1,63 @@
-# Unit 19 React Homework: Employee Directory
+# React Employee Directory
 
-## Overview
+## Table of Contents
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+- [About](#about)
+- [User Story](#user-story) 
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [App](#app)
+- [Developer](#developer)
+- [Questions](#Questions)
 
-## User Story
+  ## About
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+  This react app uses randomuser.me API to create a directory of employees. Employee information their photo, first name, last name, email, phone number and employee ID.  
 
-## Business Context
+  ## User Story  
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+  As an employee at a large company, I want to be able to easily find the contact information for my colleagues and co-workers. When I open this app, I can view all the employees at my company. I can view the employees at my company alphabetically by first name, last name or email by clicking on the respective links at the top of the table of employees. I can also easily search for an employee by name using the search bar.  
 
-## Acceptance Criteria
+  ## Technologies
 
-Given a table of random users, when the user loads the page, a table of employees should render. 
+  - Node
 
-The user should be able to:
+  - React
 
-  * Sort the table by at least one category
+  - Randomuser.me API
 
-  * Filter the users by at least one property.
+  - React UUID
 
-## Commit Early and Often
+  - Axios
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+  - HTML, CSS, & Javascript
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+  ## Installation
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+  To install necessary dependencies, run the following command in the root folder of this application
 
-Follow these guidelines for committing:
+  ```
+  npm i
+  ```
 
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+  To run the program, run
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+  ```
+  npm start
+  ```  
 
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
+  ## App  
 
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
+  <img src= "Capture.PNG">
 
 
-## Submission on BCS
+## Developer  
 
-You are required to submit the following:
+   <div class="CircleBadge CircleBadge--medium bg-gray-dark">
+   <img src="https://avatars.githubusercontent.com/Knzmck" height="90" width="90">   
+   </div>  
+   Mackenzie Schutz
 
-* the URL to the deployed application
+## Questions
 
-* the URL to the Github repository
-
+Please direct all questions the developer  

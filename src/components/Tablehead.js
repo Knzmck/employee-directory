@@ -2,17 +2,17 @@ import React from 'react';
 import "../App.css";
 
 const Tablehead = (props) => {
-    return (
-        <thead >
-          <tr>
-            <th scope="col">Image</th>
-            <th scope="col">ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Phone</th>
-          </tr>
-        </thead>
-    );
-  }
+  return (
+    <thead >
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"> <a href="#name" className="sortBtn" onClick={() => props.sortTable('first')}>First Name</a> </th>
+        <th scope="col"> <a href="#name" className="sortBtn" onClick={() => props.sortTable('last')}>Last Name</a> </th>
+        <th scope="col"> <a href="#name" className="sortBtn" onClick={() => props.sortTable('email')}>Email</a> </th>
+        <th scope="col">Phone</th>
+        <th scope="col">ID</th>
+      </tr>
+    </thead>
+  );
+}
 export default Tablehead;

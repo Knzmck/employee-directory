@@ -37,7 +37,7 @@ function DirectoryContainer() {
                 <Tablehead />
                 <tbody>
                     <EmployeeContext.Provider value={{ employee, employees }}>
-                        {employees.map(employee => <Employee employee = {employee} />)}
+                        {employees.map(employee => <Employee employee= {employee} />)}
                     </EmployeeContext.Provider>
                 </tbody>
             </table>

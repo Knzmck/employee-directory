@@ -6,6 +6,7 @@ import EmployeeContext from "../utils/EmployeeContext";
 import "../App.css";
 import Employee from '../components/Employee'
 import Tablehead from "../components/Tablehead";
+import Searchbar from "../components/Searchbar";
 
 function DirectoryContainer() {
     const [employees, setEmployees] = useState([]);
@@ -33,7 +34,8 @@ function DirectoryContainer() {
 
         <Wrapper>
             <Navbar />
-            <table className="table table-striped table-hover table-condensed">
+            <Searchbar />
+            <table className="table table-striped table-hover table-condensed mt-4">
                 <Tablehead />
                 <tbody>
                     <EmployeeContext.Provider value={{ employee, employees }}>

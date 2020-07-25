@@ -3,7 +3,7 @@ import "../App.css";
 
 const Tablehead = (props) => {
     return (
-        <thead>
+        <thead >
           <tr>
             <th scope="col">Image</th>
             <th scope="col">ID</th>

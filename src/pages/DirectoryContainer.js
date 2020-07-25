@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Wrapper from "../components/Wrapper";
 import Navbar from "../components/Navbar";
 import API from "../utils/API";
-import EmployeeContext from "../utils/EmployeeContext";
 import "../App.css";
 import Employee from '../components/Employee'
 import Tablehead from "../components/Tablehead";
@@ -12,8 +11,7 @@ function DirectoryContainer() {
     const [employees, setEmployees] = useState([]);
     const [employee, setEmployee] = useState({});
     // const [employeeIndex, setEmployeeIndex] = [];
-
-
+    
     const loadEmployees = () => {
         API.getEmployees()
             .then(employees => {
@@ -30,6 +28,7 @@ function DirectoryContainer() {
         loadEmployees();
     }, []);
 
+
     return (
 
         <Wrapper>
@@ -38,9 +37,7 @@ function DirectoryContainer() {
             <table className="table table-striped table-hover table-condensed mt-4">
                 <Tablehead />
                 <tbody>
-                    <EmployeeContext.Provider value={{ employee, employees }}>
-                        {employees.map(employee => <Employee employee= {employee} />)}
-                    </EmployeeContext.Provider>
+                        {employees.map(employee => <Employee employee={employee} />)}
                 </tbody>
             </table>
         </Wrapper>

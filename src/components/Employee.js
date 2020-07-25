@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
 import "../App.css"
-import EmployeeContext from "../utils/EmployeeContext"
 
 // Create a map of all employees
 const Employee = (props) => {
-    const { employee } = useContext(EmployeeContext);
         return (
             <tr>
                 <td> <img className="card-img" src={props.employee.image.thumbnail} alt="employee image" />

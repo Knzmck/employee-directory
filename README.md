@@ -48,6 +48,8 @@
 
   ## App  
 
+  ### View [Demo](https://employee-directory-of-wonder.herokuapp.com/)
+
   <img src= "Capture.PNG">
 
 

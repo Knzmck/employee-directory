@@ -14,9 +14,8 @@ class DirectoryContainer extends Component {
         sort: true,
         filtered: [],
     };
-
+    // Employees will load immediately when landing on the page
     componentDidMount() {
-        // make it immediately get all the employees
         this.setEmployees()
     }
 
@@ -29,7 +28,7 @@ class DirectoryContainer extends Component {
         console.log(this.state.employees)
     }
 
-    // Need a function to handle search filtering
+    //Function to handle search filtering
     handleInputChange = event => {
         event.preventDefault();
         this.setState({ search: event.target.value.toLowerCase() }, (set) => {
@@ -39,7 +38,7 @@ class DirectoryContainer extends Component {
         });
     };
 
-    // Prevent searchbar from allowing refresh
+    // Prevent searchbar from refreshing each time
     ignoreSubmit = event => {
         event.preventDefault();
         return
@@ -47,7 +46,7 @@ class DirectoryContainer extends Component {
 
     sortTable = async (sortBy) => {
         const criteria = sortBy
-        // comparison function because basic sort didn't allow parameters, though it might now that criteria is defined
+        // comparison function to sort employees
         const compare = (a, b) => {
             const employeeA = a[criteria].toUpperCase();
             const employeeB = b[criteria].toUpperCase();

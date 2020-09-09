@@ -7,8 +7,7 @@
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [App](#app)
-- [Developer](#developer)
-- [Questions](#Questions)
+- [Developer](#developer)  
 
   ## About
 
@@ -55,11 +54,6 @@
 
 ## Developer  
 
-   <div class="CircleBadge CircleBadge--medium bg-gray-dark">
    <img src="https://avatars.githubusercontent.com/Knzmck" height="90" width="90">   
-   </div>  
-   Mackenzie Schutz
-
-## Questions
-
-Please direct all questions the developer  
+ 
+   Mackenzie Schutz <a href="https://github.com/knzmck" target="_blank">@Knzmck</a>  
